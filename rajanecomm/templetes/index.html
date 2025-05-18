@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{title}}</title>
+
+  <!-- ✅ Internal CSS -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+    }
+
+    section {
+      padding: 50px 30px;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1200x400?text=Big+Sale+on+Electronics') no-repeat center center/cover;
+      height: 400px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 260px;
+      margin: 15px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body onload="welcomeUser()">
+
+  <header>
+    <h1>ElectroMart</h1>
+    <p>Top Deals on Electronics Every Day!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ✅ Hero/Home Section -->
+  <div id="home" class="hero">
+    Save Big on Latest Gadgets!
+  </div>
+
+  <!-- ✅ Shop Section -->
+  <section id="shop">
+    <h2 style="text-align:center;">Shop Electronics</h2>
+    <div class="products">
+      <div class="product-card" onclick="productClicked('Smartphone')">
+        <img src="https://via.placeholder.com/250x200?text=Smartphone" alt="Smartphone">
+        <h3>Smartphone</h3>
+        <p>Latest smartphones at unbeatable prices.</p>
+      </div>
+
+      <div class="product-card" onclick="productClicked('Laptop')">
+        <img src="https://via.placeholder.com/250x200?text=Laptop" alt="Laptop">
+        <h3>Laptop</h3>
+        <p>Powerful laptops for work and play.</p>
+      </div>
+
+      <div class="product-card" onclick="productClicked('Headphones')">
+        <img src="https://via.placeholder.com/250x200?text=Headphones" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>Experience music like never before.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      ElectroMart is your one-stop shop for the latest electronic devices and gadgets. We bring you the best deals on smartphones, laptops, and accessories — all in one place.
+      Trusted by thousands of customers across the globe.
+    </p>
+  </section>
+
+  <!-- ✅ Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@electromart.com</p>
+    <p>Phone: +1-800-123-4567</p>
+    <p>Location: 123 Electronics Blvd, Tech City</p>
+  </section>
+
+  <footer>
+    &copy; 2025 ElectroMart. All rights reserved.
+  </footer>
+
+  <!-- ✅ Internal JavaScript -->
+  <script>
+    function welcomeUser() {
+      alert("Welcome to ElectroMart!");
+    }
+
+    function productClicked(productName) {
+      console.log(productName + " clicked");
+      alert("You clicked on " + productName + "!");
+    }
+  </script>
+
+</body>
+</html>
