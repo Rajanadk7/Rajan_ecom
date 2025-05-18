@@ -2,10 +2,7 @@ from django.http import HttpResponse #used to response to the browser
 from django.shortcuts import render
 
 def homepage(request):
-    data ={
-        'title':'Electromart home page'
-    }
-    return render(request,"index.html",data)
+    return render(request,"index.html")
 
 def aboutus(request):
     return HttpResponse("welcome to rajanecomm")
