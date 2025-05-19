@@ -1,33 +1,145 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ElectroGadgets - Home</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone - Electronics Store</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to ElectroGadgets</h1>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech<span>Zone</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/product/">Products</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
 
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="products.html">Products</a> |
-        <a href="about.html">About Us</a> |
-        <a href="contact.html">Contact</a>
-    </nav>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Latest Tech Gadgets</h2>
+                <p>Discover the best smartphones, laptops, smartwatches and speakers at amazing prices</p>
+                <a href="/product/" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
 
-    <h2>Top Deals on Gadgets</h2>
-    <p>Find the best deals on smartphones, laptops, and smart devices.</p>
+    <section class="categories">
+        <div class="container">
+            <h2>Shop By Category</h2>
+            <br>
+            <div class="category-grid">
+                <div class="category-item">
+                    <img src="/static/images/smartphone-category.jpg" alt="Smartphones">
+                    <h3>Smartphones</h3>
+                    <a href="/product/#smartphones" class="btn">View Products</a>
+                </div>
+                <div class="category-item">
+                    <img src="/static/images/laptop-category.jpg" alt="Laptops">
+                    <h3>Laptops</h3>
+                    <a href="/product/#laptops" class="btn">View Products</a>
+                </div>
+                <div class="category-item">
+                    <img src="/static/images/smartwatch-category.jpg" alt="Smartwatches">
+                    <h3>Smartwatches</h3>
+                    <a href="/product/#smartwatches" class="btn">View Products</a>
+                </div>
+                <div class="category-item">
+                    <img src="/static/images/speaker-category.jpg" alt="Speakers">
+                    <h3>Speakers</h3>
+                    <a href="/product/#speakers" class="btn">View Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p><a href="products.html">Shop Now</a></p>
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="featured-products">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechZone</h3>
+                    <p>Your one-stop shop for all electronic gadgets and accessories at competitive prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/product/">Products</a></li>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@techzone.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 TechZone. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-    <hr>
-
-    <h2>Recommended Projects</h2>
-    <ul>
-        <li><strong>Smart Home Kit</strong> – Automate your home with our smart device bundle.</li>
-        <li><strong>Portable Workstation</strong> – Lightweight laptop + accessories for remote work.</li>
-        <li><strong>Gaming Setup</strong> – High-performance gaming gear in one package.</li>
-        <li><strong>Travel Tech Pack</strong> – Must-have gadgets for frequent travelers.</li>
-    </ul>
-
-    <p><a href="products.html">Explore All Products</a></p>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

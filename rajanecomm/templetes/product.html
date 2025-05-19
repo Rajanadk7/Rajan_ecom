@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TechZone</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tech<span>Zone</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/product/" class="active">Products</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Discover the latest tech gadgets</p>
+        </div>
+    </section>
+    <br>
+    <br>
+    
+    <section class="products-section">
+        <div class="container">
+            <div class="products-filter">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="smartphones">Smartphones</button>
+                    <button class="filter-btn" data-filter="laptops">Laptops</button>
+                    <button class="filter-btn" data-filter="smartwatches">Smartwatches</button>
+                    <button class="filter-btn" data-filter="speakers">Speakers</button>
+                </div>
+                <div class="sort-options">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name-asc">Name: A-Z</option>
+                        <option value="name-desc">Name: Z-A</option>
+                    </select>
+                </div>
+            </div>
+    <br>
+            
+            <div class="product-categories">
+                <section id="smartphones" class="product-category">
+                    <h2>Smartphones</h2>
+                    <div class="product-grid" id="smartphone-products">
+                        <!-- Smartphones will be loaded via JavaScript -->
+                    </div>
+                </section>
+    <br>
+                
+                <section id="laptops" class="product-category">
+                    <h2>Laptops</h2>
+                    <div class="product-grid" id="laptop-products">
+                        <!-- Laptops will be loaded via JavaScript -->
+                    </div>
+                </section>
+    <br>
+                <section id="smartwatches" class="product-category">
+                    <h2>Smartwatches</h2>
+                    <div class="product-grid" id="smartwatch-products">
+                        <!-- Smartwatches will be loaded via JavaScript -->
+                    </div>
+                </section>
+    <br>
+                <section id="speakers" class="product-category">
+                    <h2>Speakers</h2>
+                    <div class="product-grid" id="speaker-products">
+                        <!-- Speakers will be loaded via JavaScript -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>TechZone</h3>
+                    <p>Your one-stop shop for all electronic gadgets and accessories at competitive prices.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/product/">Products</a></li>
+                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@techzone.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 TechZone. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <br>
+    <br>
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-product-details">
+                <div class="modal-product-images">
+                    <div class="main-image">
+                        <img id="modalMainImage" src="" alt="">
+                    </div>
+                    <div class="thumbnail-images">
+                        <!-- Thumbnails will be added via JavaScript -->
+                    </div>
+                </div>
+                <div class="modal-product-info">
+                    <h2 id="modalProductName"></h2>
+                    <div class="price" id="modalProductPrice"></div>
+                    <div class="rating" id="modalProductRating"></div>
+                    <div class="availability" id="modalProductAvailability"></div>
+                    <p class="description" id="modalProductDescription"></p>
+                    <div class="product-options">
+                        <!-- Options will be added via JavaScript -->
+                    </div>
+                    <div class="quantity-selector">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" min="1" value="1">
+                    </div>
+                    <button class="btn add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

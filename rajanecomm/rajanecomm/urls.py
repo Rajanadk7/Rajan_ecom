@@ -19,8 +19,8 @@ from django.urls import path
 from rajanecomm import views #importing view file
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('aboutus/', views.aboutus),
+    path('about/', views.about),
     path('', views.homepage),
-    path('products/', views.products),
-    path('products/<productid>', views.productdetails),
+    path('product/', views.product),
+    path('contact/', views.contact),
 ]

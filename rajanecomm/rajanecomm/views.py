@@ -4,11 +4,11 @@ from django.shortcuts import render
 def homepage(request):
     return render(request,"index.html")
 
-def aboutus(request):
-    return HttpResponse("welcome to rajanecomm")
+def about(request):
+    return render(request,"about.html")
 
-def products(request):
-    return HttpResponse("<b>Here are the products</b>")
+def product(request):
+    return render(request,"product.html")
 
-def productdetails(request,productid):
-    return HttpResponse(productid)
+def contact(request):
+    return render(request,"contact.html")
